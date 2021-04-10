@@ -12,7 +12,7 @@ void decode_filter::init_list(){
     f_list->reserve(filter_num);
 
     //フィルタを読み込む
-    *f_list = Read_op_list("op_list.csv");
+    *f_list = Read_op_list("res/op_list.csv");
 }
 
 const filter_ptr& decode_filter::filter(){
