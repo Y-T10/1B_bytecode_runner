@@ -2,7 +2,7 @@
 MAKEFLAGS+= --no-builtin-rules
 
 #生成されるプログラム
-OutputProgram:=sim8080
+OutputProgram:=simBOBO
 
 #ソースファイルのディレクトリ
 SrcDir:=src
