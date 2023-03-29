@@ -23,11 +23,11 @@ all: ${OutputProgram}
 
 #オブジェクトファイルのリンク
 ${OutputProgram}: $(addsuffix .o, ${SRC})
-	g++ -Wall -std=c++20 -g3 -o $@ $^
+	g++ -Wall -std=c++20 -g3 -o $@ $^ -static -static-libgcc -static-libstdc++
 
 #ソースコードのコンパイル
 %.o: ${SrcDir}/%.cpp
-	g++ -Wall -std=c++20 -g3 -c $^
+	g++ -Wall -std=c++20 -g3 -c $^ -static -static-libgcc -static-libstdc++
 
 #中間生成物を削除する
 .PHONY: clean
